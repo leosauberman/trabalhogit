@@ -2,8 +2,14 @@
 
 long long int fat(long long int n)
 {	
-	if(n == 1 || n == 0)return 1;
-	return n*fat(n-1);	
+	/*if(n == 1 || n == 0)return 1;
+	return n*fat(n-1);*/
+	int i=0;
+	for(; n!= 1 || n!= 0; i++)
+	{
+		return n*fat(n-1);
+	}
+	return n;	
 }
 
 int main()
