@@ -2,18 +2,22 @@
 
 long long int fat(long long int n)
 {	
-	if(n == 0 || n == 1)return 1;
+	if(n == 1 || n == 0)return 1;
 	return n*fat(n-1);	
 }
 
 int main()
 {
-	int n;
-	int m;
-	int fatsum;
-	scanf("%d", n);
-	scanf("%d", m);
+	long long int n;
+	long long int m;
+	long long int fatsum;
+	scanf("%lli", &n);
+	printf("Fatorial de n: %lli\n", fat(n));
+	
+	scanf("%lli", &m);
+	printf("Fatorial de m: %lli\n", fat(m));
+	
 	fatsum= fat(n) + fat(m);
-	printf("%d\n", fatsum);
+	printf("Soma fatorial: %lli\n", fatsum);
 	return 0;
 }
