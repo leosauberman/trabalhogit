@@ -3,10 +3,9 @@
 int fat(int n)
 {	
 	int fatorial;
-	while(n >= 1)
+	for(n; n >= 1; n--)
 	{
-		fatorial= n*n-1;
-		n-=1;
+		n= n*n-1;
 	}
 	return fatorial;
 }
