@@ -1,11 +1,7 @@
 #include <stdio.h>
 
-int fat(int n)
+long long int fat(long long int n)
 {	
-	int fatorial;
-	for(n; n >= 1; n--)
-	{
-		n= n*n-1;
-	}
-	return fatorial;
+	if(n == 0 || n == 1)return 1;
+	return n*fat(n-1);	
 }
